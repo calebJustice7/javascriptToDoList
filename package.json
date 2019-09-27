@@ -1,0 +1,27 @@
+{
+  "name": "javascriptToDoList",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calebJustice7/javascriptToDoList.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calebJustice7/javascriptToDoList/issues"
+  },
+  "homepage": "https://github.com/calebJustice7/javascriptToDoList#readme",
+  "dependencies": {
+    "node": "^12.11.0",
+    "node-sass": "^4.12.0",
+    "sass": "^1.22.12",
+    "scss": "^0.2.4"
+  }
+}

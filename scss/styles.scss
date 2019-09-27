@@ -1,0 +1,207 @@
+
+        body {
+            background-color: #dadfea;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        p {
+            margin: 0 0 0 10px;
+            font-size: 0.7em;
+        } 
+
+        p,
+        i {
+            margin-bottom: 10px;
+        }
+
+        li:first-child {
+            margin-top: 20px;
+        }
+
+        .fa-trash-alt {
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .fa-trash-alt:hover {
+            color: red;
+        }
+
+        .fa-circle,
+        .fa-check-circle {
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .fa-circle:hover,
+        .fa-check-circle:hover {
+            background-color: #0aa900;
+            overflow: hidden;
+            border-radius: 100px;
+        }
+
+        .page-wrapper {
+            background-color: #FFFFFF;
+            width: 250px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            overflow: scroll;
+            position: relative;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: flex-start;
+            width: 150px;
+            position: relative;
+        }
+
+        li>.right-side {
+            position: absolute;
+            right: 0;
+        }
+
+        .input-wrapper {
+            position: sticky;
+            bottom: 0;
+            border-top: 1px solid black;
+            width: 100%;
+            background-color: #cea135;
+            display: flex;
+            justify-content: center;
+            height: 26px;
+        }
+
+        .input-wrapper>input {
+            border: none;
+            width: 70%;
+            padding-left: 10px;
+        }
+
+        button {
+            width: 30%;
+            border: none;
+            background-color: #d3d3d3;
+            outline: none;
+        }
+
+        h2 {
+            margin: 0px;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            border-bottom: 1px solid black;
+            width: 250px;
+            border-top-right-radius: 13px;
+            border-top-left-radius: 13px;
+            background-color: #FFFFFF;
+        }
+
+        @keyframes slidein {
+            0% {
+                width: 0%;
+                color: white
+            }
+
+            100% {
+                width: 50%;
+                color: black
+            }
+        }
+
+        .sideBar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: white;
+            border-right: 1px solid black;
+            height: 100%;
+            width: 50%;
+            animation-name: slidein;
+            animation-duration: .2s;
+            display: none;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-timing-function: ease-in-out;
+        }
+
+        #newList {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        #listSelector>li {
+            cursor: pointer;
+        }
+
+        #newList {
+            display: flex;
+            align-items: center;
+        }
+
+        #newList>input {
+            width: 40%;
+            height: 20px;
+            padding: 0;
+            border: none;
+            padding-left: 7px;
+        }
+
+        #newList>button {
+            width: 60%;
+            height: 20px;
+            padding: 0;
+        }
+
+        #header>i {
+            display: none;
+        }
+
+        #header {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        #listSelector {
+            width: 100%;
+        }
+
+        .newListItem {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 75%;
+            padding: 0 15px;
+        }
+
+        .lists {
+            width: 100%;
+        }
+
+        .fa-trash {
+            margin: 0;
+            transition: 0.2s;
+        }
+
+        .fa-trash:hover {
+            color: red;
+        }
