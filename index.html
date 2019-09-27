@@ -1,1 +1,40 @@
-hello world
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/0704771d8f.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body id="body">
+    <div class="header">
+        <h2>To Do List</h2>
+        <div id="date">Current Date:</div>
+        <h4 id="header">No list selected</h4>
+    </div>
+    <div class="page-wrapper">
+        <div class="container" id="container">
+
+        </div>
+
+        <div class="input-wrapper">
+            <button id="btn">Add Item</button>
+            <input type="text" placeholder="your task" id="input" />
+            <button id="button">View Lists</button>
+        </div>
+
+        <div class="sideBar" id="side-bar">
+            <div class="lists">
+                <ul id="listSelector">
+
+                </ul>
+            </div>
+            <div id="newList">
+                <input id="nextList" type="text" placeholder="new list">
+                <button id="createList">Create List</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
