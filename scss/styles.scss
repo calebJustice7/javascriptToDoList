@@ -4,7 +4,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-family: sans-serif;
+            font-family: "Montserrat", sans-serif;
+            color: white;
+            font-size: 1.1em;
+        }
+        .fa-pencil-alt {
+            margin-left: 5px;
+            transition: 0.2s;
+            cursor: pointer;
+            color: #00aaf1;
+        }
+        .fa-pencil-alt:hover {
+            color: #00aaf1;
         }
 
         p {
@@ -24,35 +35,37 @@
         .fa-trash-alt {
             transition: 0.2s;
             cursor: pointer;
+            color: #FF443A;
         }
 
         .fa-trash-alt:hover {
-            color: red;
+            color: #FF443A;
         }
 
-        .fa-circle,
-        .fa-check-circle {
+        .fa-circle {
             cursor: pointer;
             transition: 0.2s;
+            border-radius: 100px;
         }
 
         .fa-circle:hover,
         .fa-check-circle:hover {
-            background-color: #0aa900;
+            background-color: #31D158;
             overflow: hidden;
             border-radius: 100px;
         }
 
         .page-wrapper {
             background-color: #FFFFFF;
-            width: 250px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
             overflow: scroll;
             position: relative;
+            color: black;
         }
 
         ul {
@@ -63,7 +76,7 @@
         li {
             display: flex;
             justify-content: flex-start;
-            width: 150px;
+            width: 200px;
             position: relative;
         }
 
@@ -75,9 +88,7 @@
         .input-wrapper {
             position: sticky;
             bottom: 0;
-            border-top: 1px solid black;
             width: 100%;
-            background-color: #cea135;
             display: flex;
             justify-content: center;
             height: 26px;
@@ -98,19 +109,17 @@
 
         h2 {
             margin: 0px;
+            padding: 5px 0;
         }
 
         .header {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 10px;
-            border-bottom: 1px solid black;
-            width: 250px;
-            border-top-right-radius: 13px;
-            border-top-left-radius: 13px;
-            background-color: #FFFFFF;
+            width: 350px;
+            background: linear-gradient(to right, rgba(61,126,170,1) 0%,rgba(255,228,122,1) 100%);
         }
+
 
         @keyframes slidein {
             0% {
@@ -123,7 +132,6 @@
                 color: black
             }
         }
-
         .sideBar {
             position: absolute;
             top: 0;
@@ -133,10 +141,11 @@
             height: 100%;
             width: 50%;
             animation-name: slidein;
-            animation-duration: .2s;
+            animation-duration: .3s;
             display: none;
             animation-timing-function: ease-in-out;
             -webkit-animation-timing-function: ease-in-out;
+            color: black;
         }
 
         #newList {
@@ -191,6 +200,7 @@
             justify-content: space-between;
             width: 75%;
             padding: 0 15px;
+            margin: 20px 0;
         }
 
         .lists {
@@ -205,3 +215,45 @@
         .fa-trash:hover {
             color: red;
         }
+        #btn {
+            background-color: #E0F5F5;
+            color: #6DC18D;
+        }
+        #button {
+            background-color: #E4EFFE;
+            color: #76A9E7;
+        }
+        input {
+            background-color: #f8f8f8;
+            outline: none;
+            color: lightgrey;
+        }
+        #createList {
+            background-color: #E0F5F5;
+            color: #94D2AF;
+        }
+        .middle-text {
+            margin: 0 0 0 10px;
+            padding-top: 1px;
+        }
+        .editTasks {
+            width: 100%;
+            position: absolute;
+            bottom: 26px;
+            display: flex;
+            align-items: center;
+            height: 20px;
+            display: none;
+        }
+        .editTasks > button {
+            width: 50%;
+            padding: 0;
+            height: 100%;
+            padding: 3px;
+        }
+        .editTasks > input {
+            width: 50%;
+            height: 84%;
+            padding: 0;
+        }
+

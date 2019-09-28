@@ -5,22 +5,27 @@
     <script src="https://kit.fontawesome.com/0704771d8f.js"></script>
     <script defer src="script.js"></script>
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body id="body">
     <div class="header">
         <h2>To Do List</h2>
-        <div id="date">Current Date:</div>
-        <h4 id="header">No list selected</h4>
+        <div id="header">No List Selected</div>
     </div>
     <div class="page-wrapper">
         <div class="container" id="container">
 
         </div>
 
+        <div class="editTasks" id="editTasks">
+            <button id="editTaskBtn">Add Item</button>
+            <input type="text" placeholder="Edit Task" id="editInput" />
+        </div>
+
         <div class="input-wrapper">
             <button id="btn">Add Item</button>
-            <input type="text" placeholder="your task" id="input" />
+            <input type="text" placeholder="Your task" id="input" />
             <button id="button">View Lists</button>
         </div>
 
@@ -31,7 +36,7 @@
                 </ul>
             </div>
             <div id="newList">
-                <input id="nextList" type="text" placeholder="new list">
+                <input id="nextList" type="text" placeholder="New list">
                 <button id="createList">Create List</button>
             </div>
         </div>

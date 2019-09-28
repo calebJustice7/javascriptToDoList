@@ -13,7 +13,7 @@ document.getElementById("button").addEventListener("click", sideBarInOut);
 function sideBarInOut() {
     clicks++;
     if(clicks % 2 == 1) {
-        document.getElementById("side-bar").style.display = "flex"
+        document.getElementById("side-bar").style.display = "flex";
     }
     if(clicks % 2 == 0) {
         document.getElementById("side-bar").style.display = "none";
@@ -55,7 +55,7 @@ function newList() {
             var b = this.id.charAt(4);
 
             obj.id = b;
-            document.getElementById("header").innerHTML = "Active List: " + this.innerHTML;
+            document.getElementById("header").innerHTML = "Active List: " + "   " + this.innerHTML;
 
             console.log(b + "list");
             for(var g = 0; g < document.getElementsByClassName("list-one").length; g++){
@@ -92,6 +92,7 @@ function addTask(content, iClass) {
     var newTask = `
         <li class="item">
             <i class="far fa-trash-alt"></i>
+            <i class="fas fa-pencil-alt"></i>
             <p class="middle-text">${content}</p>
             <i class="${iClass}"></i>
         </li>
@@ -103,6 +104,20 @@ function addTask(content, iClass) {
         trash[i].addEventListener("click", function(event){
             var x = event.target;
             x.parentNode.remove();
+        });
+    }
+
+    var pencil = document.getElementsByClassName("fa-pencil-alt");
+    for(var u = 0; u < pencil.length; u++) {
+        pencil[u].addEventListener("click", function(event){
+            var g = event.target;
+            console.log(g.nextSibling.nextSibling.innerHTML);
+            document.getElementById("editTasks").style.display = "flex";
+            document.getElementById('editTaskBtn').addEventListener("click", function(){
+                var editInput = document.getElementById("editInput");
+                g.nextSibling.nextSibling.innerHTML = editInput.value;
+                document.getElementById("editTasks").style.display = "none";
+            })
         });
     }
 
@@ -127,6 +142,10 @@ document.getElementById("btn").addEventListener("click", insertContent);
 
 function insertContent(){
     const input = document.getElementById("input");
-    addTask(input.value, uncheck);
-    input.value = "";
+    if(input.value==""){
+        alert("Must enter an item");
+    } else{
+        addTask(input.value, uncheck);
+        input.value = "";
+    }
 }
