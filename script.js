@@ -8,15 +8,19 @@ var clicks = 0;
 
 var trueOrFalseChecker = [];
 
+var lists = {};
+
 document.getElementById("button").addEventListener("click", sideBarInOut);
 
 function sideBarInOut() {
     clicks++;
     if(clicks % 2 == 1) {
         document.getElementById("side-bar").style.display = "flex";
+        document.getElementById("button").innerHTML = "Hide Lists";
     }
     if(clicks % 2 == 0) {
         document.getElementById("side-bar").style.display = "none";
+        document.getElementById("button").innerHTML = "View Lists";
     }
 }
 
@@ -55,7 +59,7 @@ function newList() {
             var b = this.id.charAt(4);
 
             obj.id = b;
-            document.getElementById("header").innerHTML = "Active List: " + "   " + this.innerHTML;
+            document.getElementById("header").innerHTML = this.innerHTML;
 
             console.log(b + "list");
             for(var g = 0; g < document.getElementsByClassName("list-one").length; g++){
@@ -89,6 +93,8 @@ function addTask(content, iClass) {
 
     var list = document.getElementById(obj.id + "list");
 
+    lists.innerlist = list;
+
     var newTask = `
         <li class="item">
             <i class="far fa-trash-alt"></i>
@@ -117,6 +123,7 @@ function addTask(content, iClass) {
                 var editInput = document.getElementById("editInput");
                 g.nextSibling.nextSibling.innerHTML = editInput.value;
                 document.getElementById("editTasks").style.display = "none";
+                g = "";
             })
         });
     }

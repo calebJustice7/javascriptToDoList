@@ -5,62 +5,60 @@ body {
   align-items: center;
   font-family: "Montserrat", sans-serif;
   color: white;
-  font-size: 1.1em; }
-
-.fa-pencil-alt {
-  margin-left: 5px;
-  transition: 0.2s;
-  cursor: pointer;
-  color: #00aaf1; }
-
-.fa-pencil-alt:hover {
-  color: #00aaf1; }
-
-p {
-  margin: 0 0 0 10px;
-  font-size: 0.7em; }
-
-p,
-i {
-  margin-bottom: 10px; }
-
-li:first-child {
-  margin-top: 20px; }
-
-.fa-trash-alt {
-  transition: 0.2s;
-  cursor: pointer;
-  color: #FF443A; }
-
-.fa-trash-alt:hover {
-  color: #FF443A; }
-
-.fa-circle {
-  cursor: pointer;
-  transition: 0.2s;
-  border-radius: 100px; }
-
-.fa-circle:hover,
-.fa-check-circle:hover {
-  background-color: #31D158;
   overflow: hidden;
-  border-radius: 100px; }
+  overflow-x: hidden; }
 
 .page-wrapper {
+  margin-top: 25px;
   background-color: #FFFFFF;
-  width: 350px;
+  width: 90%;
   height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  overflow: scroll;
+  overflow: hidden;
   position: relative;
-  color: black; }
+  color: black;
+  font-size: 1.3em; }
 
-ul {
+.fa-trash {
   margin: 0;
-  padding: 0; }
+  transition: 0.2s; }
+
+.fa-trash:hover {
+  color: red; }
+
+.fa-pencil-alt {
+  margin-left: 5px;
+  transition: 0.2s;
+  color: #00aaf1; }
+
+.fa-trash-alt {
+  transition: 0.2s;
+  color: #FF443A; }
+
+.fa-circle {
+  transition: 0.2s;
+  border-radius: 100px; }
+
+.fa-circle:hover, .fa-check-circle:hover {
+  background-color: #31D158;
+  overflow: hidden;
+  border-radius: 100px; }
+
+i {
+  cursor: pointer; }
+
+p {
+  margin: 0 0 0 10px;
+  font-size: 0.7em; }
+
+p, i {
+  margin-bottom: 10px; }
+
+li:first-child {
+  margin-top: 20px; }
 
 li {
   display: flex;
@@ -70,44 +68,51 @@ li {
 
 li > .right-side {
   position: absolute;
-  right: 0; }
+  right: 0;
+  top: 2px; }
 
 .input-wrapper {
   position: sticky;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   display: flex;
   justify-content: center;
   height: 26px; }
 
-.input-wrapper > input {
-  border: none;
-  width: 70%;
-  padding-left: 10px; }
+.header {
+  padding-left: 25px;
+  padding-bottom: 18px;
+  width: calc(90% - 25px);
+  background: #FDC830;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F37335, #FDC830);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F37335, #FDC830);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  .header h2 {
+    font-size: 2em;
+    letter-spacing: 4px; }
+  .header div {
+    font-size: 1.05em; }
+
+button, input {
+  font-size: .75em;
+  outline: none;
+  border-radius: 5px; }
 
 button {
-  width: 30%;
-  border: none;
-  background-color: #d3d3d3;
-  outline: none; }
-
-h2 {
-  margin: 0px;
-  padding: 5px 0; }
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 350px;
-  background: linear-gradient(to right, #3d7eaa 0%, #ffe47a 100%); }
+  background-color: #F37335;
+  color: white;
+  padding: 3px 15px;
+  cursor: pointer;
+  border: none; }
 
 @keyframes slidein {
   0% {
     width: 0%;
     color: white; }
   100% {
-    width: 50%;
+    width: 30%;
     color: black; } }
 
 .sideBar {
@@ -117,48 +122,37 @@ h2 {
   background-color: white;
   border-right: 1px solid black;
   height: 100%;
-  width: 50%;
+  width: 30%;
   animation-name: slidein;
-  animation-duration: .3s;
+  animation-duration: .2s;
   display: none;
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
-  color: black; }
+  color: black;
+  overflow: scroll; }
+
+#newList {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center; }
+  #newList button {
+    margin-right: 10px; }
+  #newList input {
+    margin: 0 !important; }
+
+#listSelector {
+  width: 100%; }
+  #listSelector li {
+    cursor: pointer; }
 
 #newList {
   position: absolute;
   bottom: 0;
   left: 0; }
 
-#listSelector > li {
-  cursor: pointer; }
-
-#newList {
-  display: flex;
-  align-items: center; }
-
-#newList > input {
-  width: 40%;
-  height: 20px;
-  padding: 0;
-  border: none;
-  padding-left: 7px; }
-
-#newList > button {
-  width: 60%;
-  height: 20px;
-  padding: 0; }
-
 #header > i {
   display: none; }
-
-#header {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 5px;
-  margin-bottom: 10px; }
 
 #listSelector {
   width: 100%; }
@@ -172,31 +166,9 @@ h2 {
   margin: 20px 0; }
 
 .lists {
-  width: 100%; }
-
-.fa-trash {
-  margin: 0;
-  transition: 0.2s; }
-
-.fa-trash:hover {
-  color: red; }
-
-#btn {
-  background-color: #E0F5F5;
-  color: #6DC18D; }
-
-#button {
-  background-color: #E4EFFE;
-  color: #76A9E7; }
-
-input {
-  background-color: #f8f8f8;
-  outline: none;
-  color: lightgrey; }
-
-#createList {
-  background-color: #E0F5F5;
-  color: #94D2AF; }
+  width: 100%;
+  padding: 0 35px;
+  padding-left: 45px; }
 
 .middle-text {
   margin: 0 0 0 10px;
@@ -205,19 +177,51 @@ input {
 .editTasks {
   width: 100%;
   position: absolute;
-  bottom: 26px;
+  bottom: 32px;
   display: flex;
   align-items: center;
   height: 20px;
-  display: none; }
+  display: none;
+  justify-content: center; }
 
-.editTasks > button {
-  width: 50%;
-  padding: 0;
-  height: 100%;
-  padding: 3px; }
+input {
+  color: black;
+  border: none;
+  background-color: rgba(0, 122, 255, 0.1);
+  padding-top: 3px;
+  margin: 0 15px;
+  padding-left: 7px; }
 
-.editTasks > input {
+.container {
   width: 50%;
-  height: 84%;
+  display: flex;
+  flex-direction: column; }
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0;
   padding: 0; }
+
+.item {
+  width: 65%;
+  margin: 0 auto;
+  align-items: center; }
+  .item p, .item i {
+    font-size: 1.2em; }
+  .item i {
+    margin-top: 5px; }
+
+.newListItem:nth-of-type(odd) {
+  background-color: rgba(0, 122, 255, 0.1); }
+
+#listSelector {
+  display: flex;
+  flex-direction: column; }
+
+.newListItem {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px; }
